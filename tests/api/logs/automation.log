@@ -1,0 +1,17 @@
+[INFO] 2025-06-16 12:53:04,669 - GET Request: https://jsonplaceholder.typicode.com/comments?postId=1
+[INFO] 2025-06-16 12:53:05,083 - GET Success: https://jsonplaceholder.typicode.com/comments?postId=1 | Status: 200
+
+[INFO] 2025-07-03 14:38:50,649 - GET Request: https://jsonplaceholder.typicode.com/posts
+[INFO] 2025-07-03 14:38:51,177 - GET Success: https://jsonplaceholder.typicode.com/posts | Status: 200
+[INFO] 2025-07-03 14:38:51,190 - Sending GET request to: https://jsonplaceholder.typicode.com/posts?userId=1
+[INFO] 2025-07-03 14:38:51,193 - GET Request: https://jsonplaceholder.typicode.com/posts?userId=1
+[INFO] 2025-07-03 14:38:51,261 - GET Success: https://jsonplaceholder.typicode.com/posts?userId=1 | Status: 200
+[INFO] 2025-07-03 14:38:51,262 - Response status code: 200
+[INFO] 2025-07-03 14:38:51,262 - Number of posts returned: 10
+[INFO] 2025-07-03 14:38:56,831 - GET Request: https://jsonplaceholder.typicode.com/posts
+[INFO] 2025-07-03 14:38:56,914 - GET Success: https://jsonplaceholder.typicode.com/posts | Status: 200
+[INFO] 2025-07-03 14:38:56,919 - Sending GET request to: https://jsonplaceholder.typicode.com/posts?userId=1
+[INFO] 2025-07-03 14:38:56,919 - GET Request: https://jsonplaceholder.typicode.com/posts?userId=1
+[INFO] 2025-07-03 14:38:56,969 - GET Success: https://jsonplaceholder.typicode.com/posts?userId=1 | Status: 200
+[INFO] 2025-07-03 14:38:56,969 - Response status code: 200
+[INFO] 2025-07-03 14:38:56,969 - Number of posts returned: 10

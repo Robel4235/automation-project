@@ -1,0 +1,120 @@
+[INFO] 2025-06-16 17:12:42,018 - Locating all image elements on Ynet homepage
+[ERROR] 2025-06-16 17:13:13,389 - Failed to extract image sources
+Traceback (most recent call last):
+  File "C:\Users\avrah\PycharmProjects1\PythonProject\Api_ui_practice\pages\ynet_home_page.py", line 13, in get_all_image_sources
+    srcs= [img.get_attribute("src") for img in images if img.get_attribute("src")]
+                                                         ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\avrah\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 231, in get_attribute
+    attribute_value = self.parent.execute_script(
+        f"/* getAttribute */return ({getAttribute_js}).apply(null, arguments);", self, name
+    )
+  File "C:\Users\avrah\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 547, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\avrah\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 448, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\avrah\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.104); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF67A73CF65+75717]
+	GetHandleVerifier [0x00007FF67A73CFC0+75808]
+	(No symbol) [0x00007FF67A508F9A]
+	(No symbol) [0x00007FF67A510998]
+	(No symbol) [0x00007FF67A513D51]
+	(No symbol) [0x00007FF67A5B05F8]
+	(No symbol) [0x00007FF67A58737A]
+	(No symbol) [0x00007FF67A5AF39C]
+	(No symbol) [0x00007FF67A587153]
+	(No symbol) [0x00007FF67A550421]
+	(No symbol) [0x00007FF67A5511B3]
+	GetHandleVerifier [0x00007FF67AA3D74D+3223469]
+	GetHandleVerifier [0x00007FF67AA37CF2+3200338]
+	GetHandleVerifier [0x00007FF67AA55B23+3322755]
+	GetHandleVerifier [0x00007FF67A756A3A+180890]
+	GetHandleVerifier [0x00007FF67A75E13F+211359]
+	GetHandleVerifier [0x00007FF67A7452B4+109332]
+	GetHandleVerifier [0x00007FF67A745462+109762]
+	GetHandleVerifier [0x00007FF67A72BA79+4825]
+	BaseThreadInitThunk [0x00007FFC84407374+20]
+	RtlUserThreadStart [0x00007FFC8625CC91+33]
+
+[ERROR] 2025-06-16 17:13:19,897 - Test failed while loading or interacting with Ynet homepage
+Traceback (most recent call last):
+  File "C:\Users\avrah\PycharmProjects1\PythonProject\Api_ui_practice\pages\ynet_home_page.py", line 13, in get_all_image_sources
+    srcs= [img.get_attribute("src") for img in images if img.get_attribute("src")]
+                                                         ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\avrah\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 231, in get_attribute
+    attribute_value = self.parent.execute_script(
+        f"/* getAttribute */return ({getAttribute_js}).apply(null, arguments);", self, name
+    )
+  File "C:\Users\avrah\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 547, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\avrah\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 448, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\avrah\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.104); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF67A73CF65+75717]
+	GetHandleVerifier [0x00007FF67A73CFC0+75808]
+	(No symbol) [0x00007FF67A508F9A]
+	(No symbol) [0x00007FF67A510998]
+	(No symbol) [0x00007FF67A513D51]
+	(No symbol) [0x00007FF67A5B05F8]
+	(No symbol) [0x00007FF67A58737A]
+	(No symbol) [0x00007FF67A5AF39C]
+	(No symbol) [0x00007FF67A587153]
+	(No symbol) [0x00007FF67A550421]
+	(No symbol) [0x00007FF67A5511B3]
+	GetHandleVerifier [0x00007FF67AA3D74D+3223469]
+	GetHandleVerifier [0x00007FF67AA37CF2+3200338]
+	GetHandleVerifier [0x00007FF67AA55B23+3322755]
+	GetHandleVerifier [0x00007FF67A756A3A+180890]
+	GetHandleVerifier [0x00007FF67A75E13F+211359]
+	GetHandleVerifier [0x00007FF67A7452B4+109332]
+	GetHandleVerifier [0x00007FF67A745462+109762]
+	GetHandleVerifier [0x00007FF67A72BA79+4825]
+	BaseThreadInitThunk [0x00007FFC84407374+20]
+	RtlUserThreadStart [0x00007FFC8625CC91+33]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\avrah\PycharmProjects1\PythonProject\Api_ui_practice\tests\ui\test_ynet_images.py", line 16, in test_images_are_valid
+    image_urls = ynet_page.get_all_image_sources()
+  File "C:\Users\avrah\PycharmProjects1\PythonProject\Api_ui_practice\pages\ynet_home_page.py", line 18, in get_all_image_sources
+    raise Exception(f"Could not get image sources from the homepage: {e}")
+Exception: Could not get image sources from the homepage: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.104); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF67A73CF65+75717]
+	GetHandleVerifier [0x00007FF67A73CFC0+75808]
+	(No symbol) [0x00007FF67A508F9A]
+	(No symbol) [0x00007FF67A510998]
+	(No symbol) [0x00007FF67A513D51]
+	(No symbol) [0x00007FF67A5B05F8]
+	(No symbol) [0x00007FF67A58737A]
+	(No symbol) [0x00007FF67A5AF39C]
+	(No symbol) [0x00007FF67A587153]
+	(No symbol) [0x00007FF67A550421]
+	(No symbol) [0x00007FF67A5511B3]
+	GetHandleVerifier [0x00007FF67AA3D74D+3223469]
+	GetHandleVerifier [0x00007FF67AA37CF2+3200338]
+	GetHandleVerifier [0x00007FF67AA55B23+3322755]
+	GetHandleVerifier [0x00007FF67A756A3A+180890]
+	GetHandleVerifier [0x00007FF67A75E13F+211359]
+	GetHandleVerifier [0x00007FF67A7452B4+109332]
+	GetHandleVerifier [0x00007FF67A745462+109762]
+	GetHandleVerifier [0x00007FF67A72BA79+4825]
+	BaseThreadInitThunk [0x00007FFC84407374+20]
+	RtlUserThreadStart [0x00007FFC8625CC91+33]
+
+[INFO] 2025-06-16 17:16:39,793 - Locating all image elements on Ynet homepage
+[INFO] 2025-06-16 17:16:51,880 - Found 193 images
