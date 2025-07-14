@@ -15,3 +15,9 @@
 [INFO] 2025-07-03 14:38:56,969 - GET Success: https://jsonplaceholder.typicode.com/posts?userId=1 | Status: 200
 [INFO] 2025-07-03 14:38:56,969 - Response status code: 200
 [INFO] 2025-07-03 14:38:56,969 - Number of posts returned: 10
+[INFO] 2025-07-13 15:36:00,456 - POST Request: https://jsonplaceholder.typicode.com/posts | Payload: {'title': 'Post A', 'body': 'Body for A', 'userId': 1}
+[INFO] 2025-07-13 15:36:01,464 - POST Success: https://jsonplaceholder.typicode.com/posts | Status: 201
+[INFO] 2025-07-13 15:36:01,497 - POST Request: https://jsonplaceholder.typicode.com/posts | Payload: {'title': 'Post B', 'body': 'Body for B', 'userId': 2}
+[INFO] 2025-07-13 15:36:01,985 - POST Success: https://jsonplaceholder.typicode.com/posts | Status: 201
+[INFO] 2025-07-13 15:36:01,996 - POST Request: https://jsonplaceholder.typicode.com/posts | Payload: {'title': 'Post C', 'body': 'Body for C', 'userId': 3}
+[INFO] 2025-07-13 15:36:02,598 - POST Success: https://jsonplaceholder.typicode.com/posts | Status: 201
