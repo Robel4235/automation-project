@@ -15,14 +15,9 @@
    # else:
         #raise ValueError(f"Unsupported browser: {browser}")
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.firefox.service import Service as FirefoxService
-from selenium.webdriver.edge.service import Service as EdgeService
-
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
-
 from utils.config_loader import load_config
 
 def get_driver():
@@ -30,16 +25,20 @@ def get_driver():
     browser = config.get("browser", "chrome").lower()
 
     if browser == "chrome":
-        service = ChromeService(ChromeDriverManager().install())
-        return webdriver.Chrome(service=service)
+        chrome_options = Options()
+        chrome_options.add_argument("--headless=new")  # important for GitHub : Runs Chrome without opening a visible browser (needed in CI)
+        chrome_options.add_argument("--no-sandbox") #Prevents permission errors in GitHub’s environment
+        chrome_options.add_argument("--disable-dev-shm-usage")#Avoids memory issues
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--disable-extensions")
+        chrome_options.add_argument("--disable-infobars")
+        chrome_options.add_argument("--remote-debugging-port=9222")
+
+        return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
     elif browser == "firefox":
-        service = FirefoxService(GeckoDriverManager().install())
-        return webdriver.Firefox(service=service)
-
-    elif browser == "edge":
-        service = EdgeService(EdgeChromiumDriverManager().install())
-        return webdriver.Edge(service=service)
+        # You can also configure headless Firefox here if needed
+        return webdriver.Firefox()
 
     else:
         raise ValueError(f"Unsupported browser: {browser}")
