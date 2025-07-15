@@ -30,31 +30,38 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 from utils.config_loader import load_config
 
+
 def get_driver():
     config = load_config()
     browser = config.get("browser", "chrome").lower()
 
-    is_ci = os.getenv("GITHUB_ACTIONS") == "true"  # Detect GitHub Actions
+    is_ci = os.getenv("GITHUB_ACTIONS") == "true"
+    is_docker = os.path.exists("/.dockerenv") or os.getenv("IS_DOCKER") == "true"
 
     if browser == "chrome":
         options = ChromeOptions()
-        if is_ci:
+
+        if is_ci or is_docker:
             options.add_argument("--headless=new")
             options.add_argument("--no-sandbox")
             options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--disable-gpu")
+            options.add_argument("--disable-extensions")
+            options.add_argument("--remote-debugging-port=9222")
+
         service = ChromeService(ChromeDriverManager().install())
         return webdriver.Chrome(service=service, options=options)
 
     elif browser == "firefox":
         options = FirefoxOptions()
-        if is_ci:
+        if is_ci or is_docker:
             options.add_argument("--headless")
         service = FirefoxService(GeckoDriverManager().install())
         return webdriver.Firefox(service=service, options=options)
 
     elif browser == "edge":
         options = EdgeOptions()
-        if is_ci:
+        if is_ci or is_docker:
             options.add_argument("--headless=new")
             options.add_argument("--no-sandbox")
             options.add_argument("--disable-dev-shm-usage")
@@ -63,3 +70,5 @@ def get_driver():
 
     else:
         raise ValueError(f"Unsupported browser: {browser}")
+
+
