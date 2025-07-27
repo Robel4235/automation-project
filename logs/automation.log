@@ -17,3 +17,22 @@
 [INFO] 2025-07-14 17:40:35,873 - GET Success: https://www.ynet.co.il | Status: 200
 [INFO] 2025-07-14 17:41:22,171 - Locating all image elements on Ynet homepage
 [INFO] 2025-07-14 17:41:32,170 - Found 232 images
+[INFO] 2025-07-22 12:30:12,503 - POST Request: https://jsonplaceholder.typicode.com/posts | Payload: {'title': 'Post A', 'body': 'Body for A', 'userId': 1}
+[INFO] 2025-07-22 12:30:13,316 - POST Success: https://jsonplaceholder.typicode.com/posts | Status: 201
+[INFO] 2025-07-22 12:30:13,347 - POST Request: https://jsonplaceholder.typicode.com/posts | Payload: {'title': 'Post B', 'body': 'Body for B', 'userId': 2}
+[INFO] 2025-07-22 12:30:14,006 - POST Success: https://jsonplaceholder.typicode.com/posts | Status: 201
+[INFO] 2025-07-22 12:30:14,027 - POST Request: https://jsonplaceholder.typicode.com/posts | Payload: {'title': 'Post C', 'body': 'Body for C', 'userId': 3}
+[INFO] 2025-07-22 12:30:14,671 - POST Success: https://jsonplaceholder.typicode.com/posts | Status: 201
+[INFO] 2025-07-22 12:30:14,802 - GET Request: https://jsonplaceholder.typicode.com/comments?postId=1
+[INFO] 2025-07-22 12:30:15,396 - GET Success: https://jsonplaceholder.typicode.com/comments?postId=1 | Status: 200
+[INFO] 2025-07-22 12:30:15,402 - GET Request: https://jsonplaceholder.typicode.com/posts
+[INFO] 2025-07-22 12:30:15,453 - GET Success: https://jsonplaceholder.typicode.com/posts | Status: 200
+[INFO] 2025-07-22 12:30:15,458 - Sending GET request to: https://jsonplaceholder.typicode.com/posts?userId=1
+[INFO] 2025-07-22 12:30:15,458 - GET Request: https://jsonplaceholder.typicode.com/posts?userId=1
+[INFO] 2025-07-22 12:30:15,695 - GET Success: https://jsonplaceholder.typicode.com/posts?userId=1 | Status: 200
+[INFO] 2025-07-22 12:30:15,695 - Response status code: 200
+[INFO] 2025-07-22 12:30:15,696 - Number of posts returned: 10
+[INFO] 2025-07-22 12:30:15,706 - GET Request: https://www.ynet.co.il
+[INFO] 2025-07-22 12:30:15,944 - GET Success: https://www.ynet.co.il | Status: 200
+[INFO] 2025-07-22 12:31:29,474 - Locating all image elements on Ynet homepage
+[INFO] 2025-07-22 12:31:40,762 - Found 279 images
